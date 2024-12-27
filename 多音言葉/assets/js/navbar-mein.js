@@ -42,27 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     
-              <ul>
-                <li class="dropdown">
-                  <a href="#" class="dropbtn" tabindex="0">公式コンテンツ▼</a>
-                  <div class="dropdown-content">
-                                                  
-                    <div class="dropdown-submenu">
-                      <a href="#" class="submenu-btn" tabindex="0">音楽▶</a>
-                      <div class="submenu-content">
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" tabindex="0">Reverie</a>
-                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" tabindex="0">Horizon</a>
-                      </div>
-                    </div>
-    
-                    <div class="dropdown-submenu">
-                      <a href="#" class="submenu-btn" tabindex="0">イラスト▶</a>
-                      <div class="submenu-content">
-                        <a href="https://x.com/ybk__oO/status/1870193457735868459" tabindex="0">屋箱</a>
-                        <a href="https://media.discordapp.net" tabindex="0">鍋</a>
-                      </div>
-                    </div>
-                    
+
                   </div>
                 </li>
               </ul>     
