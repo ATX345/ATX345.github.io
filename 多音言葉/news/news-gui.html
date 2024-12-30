@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<style>
+body {
+  overflow: hidden; /* スクロールバーを隠す */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* スクロールバーを隠す（Chrome、Safari、Edge用） */
+}
+
+html {
+  overflow: auto; /* スクロール機能は保持する */
+}
+/* .hidden-element {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.hidden-element.show {
+  opacity: 1;
+  transform: translateY(0);
+} */
+.hidden-element {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  transition-delay: 0.3s; /* 表示を0.3秒遅らせる */
+}
+
+.hidden-element.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.sidebar-container {
+  background-color: rgb(236, 236, 236);; /* 背景色 */
+  padding: 30px;            /* 内側の余白 */
+  border-radius: 8px;       /* 角を丸める */
+}
+
+
+
+
+
+/* アニメーションの定義 */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* アニメーションを適用するクラス */
+.slide-in {
+  display: inline-block; /* レイアウト崩れを防ぐ */
+  opacity: 0; /* 初期状態で隠す */
+  animation: slideIn 0.6s ease-out forwards; /* forwardsでアニメーション後の状態を維持 */
+}
+
+
+/* アニメーションが適用される要素の中央揃え */
+.center-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 横方向の中央揃え */
+  justify-content: center; /* 縦方向の中央揃え */
+  text-align: center; /* テキストの中央揃え */
+  height: 100%; /* 必要なら高さを調整 */
+}
+
+</style>
+<body>
+
+
+  <div class="main-content">
+    <section class="main-news">
+      <h2 class="slide-in">最新情報</h2>
+
+      <div class="hidden-element">
+        <article>
+          <h3>ニュースタイトル 2</h3>
+          <p>ここにニュースの概要が入ります。詳細内容を記述します。</p>
+          <a href="#">続きを読む</a>
+        </article>
+      </div>
+
+      <div class="hidden-element">
+        <article>
+          <h3>ニュースタイトル 2</h3>
+          <p>ここにニュースの概要が入ります。詳細内容を記述します。</p>
+          <a href="#">続きを読む</a>
+        </article>
+      </div>
+
+      <div class="hidden-element">
+        <article>
+          <h3>ニュースタイトル 2</h3>
+          <p>ここにニュースの概要が入ります。詳細内容を記述します。</p>
+          <a href="#">続きを読む</a>
+        </article>
+      </div>
+
+      <div class="hidden-element">
+        <article>
+          <h3>ニュースタイトル 2</h3>
+          <p>ここにニュースの概要が入ります。詳細内容を記述します。</p>
+          <a href="#">続きを読む</a>
+        </article>
+      </div>
+
+      <div class="hidden-element">
+        <article>
+          <h3>ニュースタイトル 2</h3>
+          <p>ここにニュースの概要が入ります。詳細内容を記述します。</p>
+          <a href="#">続きを読む</a>
+        </article>
+      </div>
+
+      <div class="hidden-element">
+        <article>
+          <h3>ニュースタイトル 2</h3>
+          <p>ここにニュースの概要が入ります。詳細内容を記述します。</p>
+          <a href="#">続きを読む</a>
+        </article>
+      </div>
+
+      <div class="hidden-element">
+        <article>
+          <h3>ニュースタイトル 2</h3>
+          <p>ここにニュースの概要が入ります。詳細内容を記述します。</p>
+          <a href="#">続きを読む</a>
+        </article>
+      </div>
+
+      <div class="hidden-element">
+        <article>
+          <h3>ニュースタイトル 2</h3>
+          <p>ここにニュースの概要が入ります。詳細内容を記述します。</p>
+          <a href="#">続きを読む</a>
+        </article>
+      </div>
+
+      <div class="hidden-element">
+        <article>
+          <h3>ニュースタイトル 2</h3>
+          <p>ここにニュースの概要が入ります。詳細内容を記述します。</p>
+          <a href="#">続きを読む</a>
+        </article>
+      </div>
+      
+
+    </section>
+    <div id="side-mein">
+      <aside class="sidebar">
+        <h2 class="slide-in">archive</h2>
+        <ul class=" sidebar-container hidden-element">
+          <li><p>2024</p></li>
+          <li><a href="#">注目ニュース 1</a></li>
+          <li><a href="#">注目ニュース 2</a></li>
+          <li><a href="#">注目ニュース 3</a></li>
+          <li><a href="#">注目ニュース 4</a></li>
+        </ul>
+  
+        <br>
+        <ul class=" sidebar-container hidden-element">
+          <li><p>2024</p></li>
+          <li><a href="#">注目ニュース 1</a></li>
+          <li><a href="#">注目ニュース 2</a></li>
+          <li><a href="#">注目ニュース 3</a></li>
+          <li><a href="#">注目ニュース 4</a></li>
+        </ul>
+      </br>
+      </aside>
+    </div>
+
+    <div id="side-sub" style="display: none;">
+      mobairu-taiou
+    </div>
+
+
+   
+
+  </div>
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".hidden-element");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    });
+
+    elements.forEach(element => observer.observe(element));
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const sideMein = document.getElementById("side-mein");
+  const sideSub = document.getElementById("side-sub");
+
+  function toggleNavbar() {
+    if (window.innerWidth <= 768) {
+      sideMein.style.display = "none";
+      sideSub.style.display = "block";
+    } else {
+      sideMein.style.display = "block";
+      sideSub.style.display = "none";
+    }
+  }
+
+  // 初期状態を設定
+  toggleNavbar();
+
+  // ウィンドウリサイズ時に切り替え
+  window.addEventListener("resize", toggleNavbar);
+});
+
+</script>
+</html>
